@@ -1,6 +1,10 @@
+
+console.log("before");
 document.addEventListener("deviceready", onDeviceReady, false);
+console.log("after event");
 
 function onDeviceReady() {
+    console.log("onDeviceReady");
     navigator.splashscreen.hide();
     var app = new App();
     app.run();
@@ -13,6 +17,7 @@ App.prototype = {
     resultsField: null,
 
     run: function() {
+        console.log("run");
         var that = this,
             scanButton = document.getElementById("scanButton");
 
@@ -25,6 +30,7 @@ App.prototype = {
     },
 
     _scan: function() {
+        console.log("scan");
         var that = this;
         if (window.navigator.simulator === true) {
             alert("Not Supported in Simulator.");
