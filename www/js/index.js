@@ -5,7 +5,7 @@ console.log("after event");
 
 function onDeviceReady() {
     console.log("onDeviceReady");
-    navigator.splashscreen.hide();
+    //navigator.splashscreen.hide();
     var app = new App();
     app.run();
 }
